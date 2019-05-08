@@ -1,5 +1,6 @@
 'use strict'
 
+const logger = require('./logger');
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -21,4 +22,4 @@ app.use(express.static(STATIC_RESOURCE_DIRECTORY))
 app.get('/', handleRequest);
 app.listen(PORT);
 
-console.log(`Running on http://${HOST}:${PORT}`);
+logger.info(`Running on http://${HOST}:${PORT}`);
